@@ -5,7 +5,7 @@ var leituraAssincrona = require('./leitura_async');
 
 var file = './node.zip';
 var stream = fs.createWriteStream( file );
-var download = 'http://nodejs.org/dist/v0.10.12/node-v0.10.12.tar.gz';
+var download = 'http://nodejs.org/dist/v0.10.12/node-v0.10.24.tar.gz';
 
 var monitoraDownload = function( res )
 {

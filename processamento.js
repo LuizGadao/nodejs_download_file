@@ -5,7 +5,7 @@ var leituraAssincrona = require('./leitura_async');
 
 var file = './node.zip';
 var stream = fs.createWriteStream( file );
-var download = 'http://nodejs.org/dist/v0.10.12/node-v0.10.24.tar.gz';
+var download = 'http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz';
 
 var monitoraDownload = function( res )
 {
@@ -23,7 +23,7 @@ var monitoraDownload = function( res )
 			if ( erro ) throw erro;
 
 			if ( total )
-				var porcent = (stat.size / total).toFixed(2);
+				var porcent = ( (stat.size / total).toFixed(2) ) * 100;
 				console.log( 'downloading: ' + stat.size + ' bits ' + ' total: ' + total + 'bits' + ' % ' + porcent );
 		}  )
 
